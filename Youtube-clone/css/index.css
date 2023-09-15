@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 10px;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+header{
+    height:5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: fixed;
+    background: white;
+}
+header .nav-left{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.nav-left span{
+    display: block;
+    height: 100%;
+    font-size: 3.5rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-left img{
+    height: 7rem;
+    width: 5rem;
+    object-fit: contain;
+}
+.nav-left h2{
+    font-size: 2rem;
+}
+header .nav-center{
+    min-height: 100%;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-center input{
+    height:3.5rem;
+    width: 80%;
+    border:1px solid #ccc;
+    padding: 0 2rem;
+    outline: none;
+    border-radius:1rem 0 0 1rem;
+}
+.nav-center button:nth-of-type(1){
+    height:3.5rem;
+    width:5rem;
+    font-size: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-left:none;
+}
+.nav-center button:nth-of-type(2){
+    margin-left: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .nav-right{
+    min-height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+.nav-right span{
+    font-size: 2.5rem;
+}
+.nav-right img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.side-bar{
+    height: 100vh;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 25rem;
+    padding-top: 1rem;
+    list-style: none;
+    padding: 1rem;
+}
+.side-bar li{
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+.side-bar li span:nth-of-type(1){
+    font-size: 2.3rem;
+}
+.side-bar li span:nth-of-type(2){
+    font-size: 1.3rem;
+}
+#menu-bar:hover{
+    cursor: pointer;
+    background: rgb(231, 230, 230);
+    border-radius: 50%;
+}
+.active{
+    width: 6rem;
+}
+.active li span:nth-of-type(2){
+    display: none;
+}
+.side-bar li:hover{
+    cursor: pointer;
+    background: rgb(231, 230, 230);
+    border-radius: 1rem;
+}
+.suggest{
+    height: 4.3rem;
+    width:calc(100% - 25rem);
+    display: flex;
+    align-items: center;
+    margin-left:25rem ;
+    overflow-x: scroll;
+    list-style: none;
+    gap: 1rem;
+    padding: 1rem;
+    position: fixed;
+    background: white;
+    top: 5rem;
+}
+.side-bar li:nth-of-type(1){
+    background: rgb(231, 230, 230);
+    border-radius: 1rem;
+}
+.suggest li{
+    font-size: 1.3rem;
+    padding: 0.4rem 1.5rem;
+    background: rgb(219, 219, 219);
+    border-radius: 5px;
+}
+.suggest::-webkit-scrollbar{
+    display: none;
+}
+.a-submenu{
+    margin-left: 6rem;
+    width: calc(100% - 6rem);
+}
+.main-active{
+    margin-left: 6rem !important;
+    width: calc(100% - 6rem);
+}
+.suggest span{
+    background: rgb(219, 219, 219);
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: 50%;
+    display: none;
+}
+.m-active{
+    left: 0 !important;
+}
+.b-active{
+    background: rgba(0, 0, 0, 0.781);
+}
+.n-active{
+    margin-top: 0;
+    position: relative;
+    background: white;
+    z-index: 100;
+}
+.main-container{
+    height: auto;
+    width: calc(100% -25rem);
+    margin-left: 25rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding-top: 10rem;
+}
+.main-container .video{
+    max-height: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+.video .thumb{
+    height: 72%;
+    width: 100%;
+}
+.thumb img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.video .video-details{
+    height: 28%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.video-details .chennal-logo{
+    height: 4rem;
+    min-width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.video-details .chennal-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
+}
+.chennal-details h2{
+    font-size: 1.2rem;
+}
+.chennal-logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.video-details span{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:700px) {
+    header{
+        border-bottom:1px solid #ccc;
+        padding: 0;
+        overflow: hidden;
+    }
+    header .nav-left{
+        flex: 10;
+    }
+    header .nav-center{
+        flex: 0.5;
+    }
+    header .nav-right{
+        flex: 0.5;
+    }
+    header .nav-left span{display: none;}
+    header .nav-left img{
+        height: 8rem;
+        width: 5rem;
+        object-fit:contain;
+    }
+    header .nav-center input{display: none;}
+    header .nav-center button{
+        background: unset;
+        border: none !important;
+
+    }
+    header .nav-center button:nth-of-type(2){
+        display: none;
+    }
+    header .nav-right span{
+        display: none;
+    }
+    header .nav-right img{
+        height: 3rem;
+        width: 3rem;
+    }
+    .side-bar {
+        background: white;
+        left:-100%;
+        transition: all 0.2s;
+        z-index: 10;
+    }
+    .suggest{
+        margin-left: 0;
+        width:100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+    .suggest span{
+        display: block;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    .suggest span::after{
+        content: '';
+        display: block;
+        height: 90%;
+        width: .1rem;
+        top: 0;
+        background:#ccc;
+        position: absolute;
+        right: -1rem;
+    }
+    .main-container{
+        margin-left: 0 !important;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
